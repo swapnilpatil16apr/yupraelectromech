@@ -1,0 +1,688 @@
+<!DOCTYPE html><html class="light scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Yupra ElectroMech — Technical Services &amp; Systems Integration</title>
+<!-- Fonts: Space Grotesk, Inter & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS with Forms & Container Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+            },
+            accent: {
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          },
+          fontFamily: {
+            headline: ["Space Grotesk", "sans-serif"],
+            body: ["Inter", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Technical Subtle Grid Overlay for Light Theme */
+    .blueprint-grid-light {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(226, 232, 240, 0.45) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(226, 232, 240, 0.45) 1px, transparent 1px);
+    }
+    .technical-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+    }
+    .technical-card:hover {
+      box-shadow: 0 8px 20px -4px rgba(15, 23, 42, 0.08);
+    }
+    @keyframes subtle-pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.55; transform: scale(0.96); }
+    }
+    .pulse-indicator {
+      animation: subtle-pulse 2.2s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased font-body selection:bg-orange-500 selection:text-white min-h-screen blueprint-grid-light" data-mode="connect">
+<!-- ================= TOP APP BAR ================= -->
+<header class="top-0 sticky z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-200">
+<div class="flex justify-between items-center w-full px-6 lg:px-12 max-w-7xl mx-auto h-20">
+<!-- Logo & Identity Group -->
+<a class="flex items-center gap-3.5 group focus:outline-none rounded-lg" href="#hero">
+<div class="relative w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-orange-50 border border-orange-200/80 overflow-hidden shadow-sm group-hover:border-orange-500 transition-colors">
+<img alt="Yupra ElectroMech Emblem" class="w-full h-full object-contain p-1 transform group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8MHAjqFYqvToeHqKKe3j-LRm35Ue4sez8Elq6Ue8fAm1ctkaJ2JFr0nBWtU5DBFPvHJs70LDj8jC_xUd37sRnHMihEXpPp-fCUBmrndJXb0TwOnN1c8NMO2rqey-mejwG9-Fdb-l-e74Gmf299uZUnwhqzC8lpVbQ70MhUi2U0TH__uK6PltsFTudVnZ-2shQheKtO9YVz5T11wz_oyMnQwaReZ_lG-AZNvFZN5T16i2k8i1rE8Cyok07NJwd_MDXQ00">
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-headline">
+<span class="text-xl font-bold tracking-tight text-slate-900">YUPRA</span>
+<span class="text-xl font-bold tracking-tight text-orange-600">ELECTROMECH</span>
+</div>
+<span class="text-[10px] font-mono uppercase tracking-wider text-slate-500 font-semibold hidden sm:inline-block">Technical Services &amp; Systems Integration</span>
+</div>
+</a>
+<!-- Desktop Navigation Links -->
+<nav aria-label="Main Navigation" class="hidden md:flex items-center gap-8 font-mono text-xs font-semibold uppercase tracking-wider text-slate-600">
+<a class="text-orange-600 border-b-2 border-orange-600 pb-1 hover:text-orange-700 transition-colors" href="#services">Services</a>
+<a class="hover:text-slate-900 transition-colors" href="#capabilities">Capabilities</a>
+
+</nav>
+<!-- Trailing Actions (Removed Rapid Response & Quote Buttons) -->
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-200 bg-slate-50 text-slate-700 text-xs font-mono font-medium hover:bg-slate-100 hover:border-slate-300 transition-colors" href="tel:+91 8600919101">
+<span class="material-symbols-outlined text-[16px] text-orange-600" data-icon="call">call</span>
+<span class="">+91 8600919101</span>
+</a>
+
+</div>
+</div>
+</header>
+<!-- ================= HERO SECTION ================= -->
+<section class="relative pt-16 pb-16 lg:pt-24 lg:pb-24 px-6 lg:px-12 max-w-7xl mx-auto" id="hero">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Hero Left: Mission-Critical Content -->
+<div class="lg:col-span-7 flex flex-col items-start">
+<!-- EST & Authority Chip -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-700 font-mono text-xs uppercase tracking-wider mb-6 font-semibold">
+<span class="w-2 h-2 rounded-full bg-orange-600"></span>
+<span class="">EST. 2026 • LICENSED MEP &amp; LOW CURRENT SPECIALISTS</span>
+</div>
+<h1 class="text-4xl sm:text-5xl lg:text-5xl font-headline font-bold text-slate-900 tracking-tight mb-5 leading-[1.15]">
+          High-Precision Engineering for <span class="text-orange-600 underline decoration-orange-200 decoration-wavy underline-offset-4">Critical Building Systems</span>
+</h1>
+<p class="text-lg text-slate-600 max-w-2xl mb-8 leading-relaxed font-body">Yupra ElectroMech delivers agile, high-precision engineering for commercial fire protection, smart security, industrial HVAC, and certified ELV low-current technical systems.</p>
+<!-- Action Matrix -->
+<div class="flex flex-wrap items-center gap-4 w-full sm:w-auto mb-10">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg bg-orange-600 text-white font-headline font-semibold hover:bg-orange-700 shadow-md shadow-orange-600/20 transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-orange-500" href="#services">
+<span class="">Explore Solutions</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 font-headline font-semibold shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-orange-500" href="#contact">
+<span class="material-symbols-outlined text-orange-600 text-[20px]" data-icon="contact_support">contact_support</span>
+<span class="">Contact Engineers</span>
+</a>
+</div>
+<!-- Compliance Mini-Bar -->
+</div>
+<!-- Hero Right: Metric Cluster Bento -->
+<div class="lg:col-span-5 grid grid-cols-2 gap-4" id="telemetry">
+<!-- Metric Tile 1 -->
+<div class="technical-card p-5 rounded-xl flex flex-col justify-between hover:border-orange-300 transition-colors">
+<div class="flex justify-between items-start mb-3">
+<span class="font-mono text-xs text-orange-600 font-semibold">SRV-EXP</span>
+<span class="material-symbols-outlined text-slate-400 text-[20px]" data-icon="calendar_month">calendar_month</span>
+</div>
+<div>
+<div class="text-3xl font-headline font-bold text-slate-900 tracking-tight">1+</div>
+<div class="font-mono text-xs text-slate-500 uppercase mt-1">Years Experience</div>
+</div>
+</div>
+<!-- Metric Tile 2 -->
+<div class="technical-card p-5 rounded-xl flex flex-col justify-between hover:border-orange-300 transition-colors">
+<div class="flex justify-between items-start mb-3">
+<span class="font-mono text-xs text-orange-600 font-semibold">MET-PRJ</span>
+<span class="material-symbols-outlined text-slate-400 text-[20px]" data-icon="task_alt">task_alt</span>
+</div>
+<div>
+<div class="text-3xl font-headline font-bold text-slate-900 tracking-tight">20+</div>
+<div class="font-mono text-xs text-slate-500 uppercase mt-1">Projects Delivered</div>
+</div>
+</div>
+<!-- Metric Tile 3 -->
+<div class="technical-card p-5 rounded-xl flex flex-col justify-between hover:border-orange-300 transition-colors">
+<div class="flex justify-between items-start mb-3">
+<span class="font-mono text-xs text-orange-600 font-semibold">CLI-RET</span>
+<span class="material-symbols-outlined text-slate-400 text-[20px]" data-icon="groups">groups</span>
+</div>
+<div>
+<div class="text-3xl font-headline font-bold text-slate-900 tracking-tight">15+</div>
+<div class="font-mono text-xs text-slate-500 uppercase mt-1">Enterprise Clients</div>
+</div>
+</div>
+<!-- Metric Tile 4 -->
+<div class="technical-card p-5 rounded-xl flex flex-col justify-between bg-orange-50/50 border-orange-200 hover:border-orange-300 transition-colors">
+<div class="flex justify-between items-start mb-3">
+<span class="font-mono text-xs text-orange-700 font-semibold">MEP-STD</span>
+<span class="material-symbols-outlined text-orange-600 text-[20px]" data-icon="verified">verified</span>
+</div>
+<div>
+<div class="text-3xl font-headline font-bold text-orange-700 tracking-tight">100%</div>
+<div class="font-mono text-xs text-orange-800/80 uppercase mt-1">Civil Defence Approval</div>
+</div>
+</div>
+<!-- System Heartbeat Strip -->
+<div class="col-span-2 technical-card p-3.5 rounded-lg flex items-center justify-between font-mono text-xs">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 pulse-indicator"></span>
+<span class="text-slate-800 font-medium">MEP Engineering NOC Operational</span>
+</div>
+<!-- <span class="text-slate-500">UAE Regional Center</span> -->
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SERVICES MATRIX ================= -->
+<section class="py-20 lg:py-24 px-6 lg:px-12 max-w-7xl mx-auto border-t border-slate-200" id="services">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+<div class="">
+<div class="flex items-center gap-2 text-orange-600 font-mono text-xs font-bold uppercase tracking-wider mb-2">
+<span class="h-px w-6 bg-orange-500"></span>
+</div>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-slate-900">
+          What We Do
+        </h2>
+<p class="text-slate-600 mt-2 max-w-2xl text-base">
+          Six core service lines covering the full spectrum of technical building systems — from fire life safety and gas suppression to industrial power and communications infrastructure.
+        </p>
+</div>
+<div class="hidden sm:flex items-center gap-2 bg-slate-50 px-3.5 py-1.5 rounded-lg border border-slate-200 font-mono text-xs text-slate-600 font-medium">
+<span class="material-symbols-outlined text-[16px] text-orange-600" data-icon="tune">tune</span>
+<span class="">Standardized Protocol v4.2</span>
+</div>
+</div>
+<!-- 6-Service Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: Testing, Repairing & Maintenance -->
+<div class="technical-card p-6 rounded-xl flex flex-col justify-between hover:border-orange-400 transition-all duration-300 group hover:-translate-y-1">
+<div>
+<div class="flex justify-between items-start mb-5">
+<div class="w-12 h-12 rounded-lg bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 group-hover:scale-108 transition-transform">
+<span class="material-symbols-outlined text-[24px]" data-icon="build">build</span>
+</div>
+<span class="font-mono text-xs px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-600 font-medium">T / R / M</span>
+</div>
+<div class="font-mono text-xs text-orange-600 font-semibold mb-1">SRV-001</div>
+<h3 class="text-xl font-headline font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+            Testing, Repairing &amp; Maintenance
+          </h3>
+<p class="text-sm text-slate-600 mb-5 leading-relaxed">
+            Comprehensive testing, fault diagnosis, and preventive maintenance for all electrical and mechanical systems. Minimize downtime with scheduled service contracts.
+          </p>
+<ul class="space-y-2 mb-6 text-sm text-slate-700">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Scheduled Preventive Maintenance</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Breakdown Diagnostics &amp; Repair</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Performance Testing &amp; Certification</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Genuine Spare Parts Supply</span>
+</li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 font-mono text-xs text-orange-600 hover:text-orange-700 font-bold group/link uppercase tracking-wider" href="#contact">
+<span class="">Schedule Inspection</span>
+<span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Card 2: Fire Alarm Control Panel -->
+<div class="technical-card p-6 rounded-xl flex flex-col justify-between hover:border-orange-400 transition-all duration-300 group hover:-translate-y-1">
+<div class="">
+<div class="flex justify-between items-start mb-5">
+<div class="w-12 h-12 rounded-lg bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 group-hover:scale-108 transition-transform">
+<span class="material-symbols-outlined text-[24px]" data-icon="local_fire_department">local_fire_department</span>
+</div>
+<span class="font-mono text-xs px-2.5 py-1 rounded bg-orange-100/60 border border-orange-200 text-orange-800 font-medium">FACP</span>
+</div>
+<div class="font-mono text-xs text-orange-600 font-semibold mb-1">SRV-002</div>
+<h3 class="text-xl font-headline font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+            Fire Alarm Control Panel
+          </h3>
+<p class="text-sm text-slate-600 mb-5 leading-relaxed">
+            Design, supply, installation, and commissioning of addressable and conventional fire alarm systems.
+          </p>
+<ul class="space-y-2 mb-6 text-sm text-slate-700">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Addressable &amp; Conventional Systems</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Zone Mapping &amp; System Programming</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Annual AMC &amp; Civil Defence Inspection</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Central BMS &amp; Smoke Damper Integration</span>
+</li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 font-mono text-xs text-orange-600 hover:text-orange-700 font-bold group/link uppercase tracking-wider" href="#contact">
+<span class="">Configure System</span>
+<span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Card 3: All Types of Kitchen Systems -->
+<div class="technical-card p-6 rounded-xl flex flex-col justify-between hover:border-orange-400 transition-all duration-300 group hover:-translate-y-1">
+<div>
+<div class="flex justify-between items-start mb-5">
+<div class="w-12 h-12 rounded-lg bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 group-hover:scale-108 transition-transform">
+<span class="material-symbols-outlined text-[24px]" data-icon="restaurant">restaurant</span>
+</div>
+<span class="font-mono text-xs px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-600 font-medium">KTCHN</span>
+</div>
+<div class="font-mono text-xs text-orange-600 font-semibold mb-1">SRV-003</div>
+<h3 class="text-xl font-headline font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+            Commercial Kitchen Systems
+          </h3>
+<p class="text-sm text-slate-600 mb-5 leading-relaxed">
+            Full-spectrum commercial kitchen engineering — UL300 wet chemical fire suppression, high-capacity ventilation hoods, ecology units, and heavy equipment maintenance.
+          </p>
+<ul class="space-y-2 mb-6 text-sm text-slate-700">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Kitchen Hood &amp; Dual-Speed Exhaust</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">UL 300 Certified Fire Suppression</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Automatic Grease Trap Interceptors</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Electrostatic Precipitator (ESP) AMC</span>
+</li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 font-mono text-xs text-orange-600 hover:text-orange-700 font-bold group/link uppercase tracking-wider" href="#contact">
+<span class="">Survey Kitchen</span>
+<span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Card 4: Public Announcement & Voice Evacuation -->
+<div class="technical-card p-6 rounded-xl flex flex-col justify-between hover:border-orange-400 transition-all duration-300 group hover:-translate-y-1">
+<div>
+<div class="flex justify-between items-start mb-5">
+<div class="w-12 h-12 rounded-lg bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 group-hover:scale-108 transition-transform">
+<span class="material-symbols-outlined text-[24px]" data-icon="campaign">campaign</span>
+</div>
+<span class="font-mono text-xs px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-600 font-medium">PA/SYS</span>
+</div>
+<div class="font-mono text-xs text-orange-600 font-semibold mb-1">SRV-004</div>
+<h3 class="text-xl font-headline font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+            Public Announcement &amp; Voice Evacuation
+          </h3>
+<p class="text-sm text-slate-600 mb-5 leading-relaxed">
+            High-fidelity networked PA and EN 54-16 compliant emergency voice evacuation systems for retail malls, corporate towers, hospitality, and educational campuses.
+          </p>
+<ul class="space-y-2 mb-6 text-sm text-slate-700">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Multi-Zone Matrix Audio Distribution</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">BGM &amp; Priority Emergency Override</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Dante &amp; IP-Based PA Networks</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Civil Defence Fire Alarm Linked Evac</span>
+</li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 font-mono text-xs text-orange-600 hover:text-orange-700 font-bold group/link uppercase tracking-wider" href="#contact">
+<span class="">Engineer PA System</span>
+<span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Card 5: CCTV & Smart Surveillance -->
+<div class="technical-card p-6 rounded-xl flex flex-col justify-between hover:border-orange-400 transition-all duration-300 group hover:-translate-y-1">
+<div>
+<div class="flex justify-between items-start mb-5">
+<div class="w-12 h-12 rounded-lg bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 group-hover:scale-108 transition-transform">
+<span class="material-symbols-outlined text-[24px]" data-icon="videocam">videocam</span>
+</div>
+<span class="font-mono text-xs px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-600 font-medium">CCTV</span>
+</div>
+<div class="font-mono text-xs text-orange-600 font-semibold mb-1">SRV-005</div>
+<h3 class="text-xl font-headline font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+            CCTV &amp; Smart Surveillance
+          </h3>
+<p class="text-sm text-slate-600 mb-5 leading-relaxed">
+            Turnkey enterprise IP video surveillance, AI analytics, high-capacity NVR/SAN arrays, and secure remote operations centers meeting SIRA / Police compliance.
+          </p>
+<ul class="space-y-2 mb-6 text-sm text-slate-700">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">4K AI-Powered IP Camera Networks</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Enterprise NVR/VMS Failover Clusters</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">License Plate Recognition (ANPR)</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Fiber Backbone &amp; Structured Cabling</span>
+</li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 font-mono text-xs text-orange-600 hover:text-orange-700 font-bold group/link uppercase tracking-wider" href="#contact">
+<span class="">Deploy Surveillance</span>
+<span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Card 6: EPABX Telephony Systems -->
+<div class="technical-card p-6 rounded-xl flex flex-col justify-between hover:border-orange-400 transition-all duration-300 group hover:-translate-y-1">
+<div>
+<div class="flex justify-between items-start mb-5">
+<div class="w-12 h-12 rounded-lg bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 group-hover:scale-108 transition-transform">
+<span class="material-symbols-outlined text-[24px]" data-icon="call">call</span>
+</div>
+<span class="font-mono text-xs px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-slate-600 font-medium">EPABX</span>
+</div>
+<div class="font-mono text-xs text-orange-600 font-semibold mb-1">SRV-006</div>
+<h3 class="text-xl font-headline font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+            EPABX Telephony Systems
+          </h3>
+<p class="text-sm text-slate-600 mb-5 leading-relaxed">
+            Hybrid IP-PBX communication trunks, cloud telephony migration, auto-attendant IVR trees, and integrated multi-facility video intercom stations.
+          </p>
+<ul class="space-y-2 mb-6 text-sm text-slate-700">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Enterprise IP &amp; Hybrid PBX Racks</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">IVR Trees &amp; Automated Routing</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">SIP Trunks &amp; Remote Softphones</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-600 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="">Video Door Access Intercom Integrations</span>
+</li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 font-mono text-xs text-orange-600 hover:text-orange-700 font-bold group/link uppercase tracking-wider" href="#contact">
+<span class="">Connect Telephony</span>
+<span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- ================= CAPABILITIES & COMPLIANCE SECTION ================= -->
+<section class="py-20 lg:py-24 px-6 lg:px-12 max-w-7xl mx-auto border-t border-slate-200" id="capabilities">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center" id="compliance">
+<!-- Trust Narrative -->
+<div class="lg:col-span-5">
+<div class="flex items-center gap-2 text-orange-600 font-mono text-xs font-bold uppercase tracking-wider mb-2">
+<span class="h-px w-6 bg-orange-500"></span>
+</div>
+<h2 class="text-3xl lg:text-4xl font-headline font-bold text-slate-900 mb-6">
+          Built on Technical Expertise &amp; Compliance Rigor
+        </h2>
+<p class="text-slate-600 mb-6 leading-relaxed">Delivering modern, mission-critical MEP and low-current engineering systems with 2+ years of high-growth excellence across commercial, industrial, healthcare, and hospitality facilities. Our multidisciplinary engineering teams oversee every phase from load calculations to final Civil Defence sign-off.</p>
+<!-- Compliance List -->
+<div class="space-y-3.5">
+<div class="flex items-start gap-3 p-3.5 rounded-lg bg-slate-50 border border-slate-200">
+<span class="material-symbols-outlined text-orange-600 text-[22px] mt-0.5" data-icon="workspace_premium">workspace_premium</span>
+<div>
+<div class="font-headline font-bold text-slate-900 text-sm">Certified Low Current &amp; CCTV Engineers</div>
+<div class="text-xs text-slate-600 mt-0.5">SIRA and local regulatory certified technicians with up-to-date credentialing.</div>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3.5 rounded-lg bg-slate-50 border border-slate-200">
+<span class="material-symbols-outlined text-orange-600 text-[22px] mt-0.5" data-icon="electric_bolt">electric_bolt</span>
+<div>
+<div class="font-headline font-bold text-slate-900 text-sm">Licensed Grade-A Electrical Contractors</div>
+<div class="text-xs text-slate-600 mt-0.5">Authorized for medium voltage distribution panels, MCC switchgears, and UPS backups.</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 4 Pillars Grid (Modified: Removed 'Rapid Response Guarantee' badge) -->
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="technical-card p-6 rounded-xl flex flex-col justify-between">
+<div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center mb-4 border border-orange-200">
+<span class="material-symbols-outlined text-[22px]" data-icon="security">security</span>
+</div>
+<h4 class="font-headline font-bold text-slate-900 mb-2">Certified Professionals</h4>
+<p class="text-sm text-slate-600 leading-relaxed">
+            Continuous technical training programs ensuring factory-certified installation of major OEM equipment brands.
+          </p>
+</div>
+<div class="technical-card p-6 rounded-xl flex flex-col justify-between">
+<div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center mb-4 border border-orange-200">
+<span class="material-symbols-outlined text-[22px]" data-icon="verified">verified</span>
+</div>
+<h4 class="font-headline font-bold text-slate-900 mb-2">Quality &amp; Safety Compliance</h4>
+<p class="text-sm text-slate-600 leading-relaxed">
+            Standardized protocols aligned with international safety codes and technical mandates.
+          </p>
+</div>
+<div class="technical-card p-6 rounded-xl flex flex-col justify-between">
+<div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center mb-4 border border-orange-200">
+<span class="material-symbols-outlined text-[22px]" data-icon="query_stats">query_stats</span>
+</div>
+<h4 class="font-headline font-bold text-slate-900 mb-2">ISO 9001 Quality Assured</h4>
+<p class="text-sm text-slate-600 leading-relaxed">
+            Systematic inspection protocols with calibrated testing instruments and digital tamper-proof audit reports.
+          </p>
+</div>
+<div class="technical-card p-6 rounded-xl flex flex-col justify-between">
+<div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center mb-4 border border-orange-200">
+<span class="material-symbols-outlined text-[22px]" data-icon="assignment_turned_in">assignment_turned_in</span>
+</div>
+<h4 class="font-headline font-bold text-slate-900 mb-2">Turnkey Execution</h4>
+<p class="text-sm text-slate-600 leading-relaxed">
+            Complete lifecycle management: engineering surveys, local authority approval, supply, testing, and multi-year AMC.
+          </p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<section class="py-20 lg:py-24 px-6 lg:px-12 max-w-7xl mx-auto border-t border-slate-200" id="contact">
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+    <div>
+      <div class="flex items-center gap-2 text-orange-600 font-mono text-xs font-bold uppercase tracking-wider mb-2">
+        <span class="h-px w-6 bg-orange-500"></span>
+      </div>
+      <h2 class="text-3xl lg:text-4xl font-headline font-bold text-slate-900">
+        Office &amp; Contact Details
+      </h2>
+      <p class="text-slate-600 mt-2 max-w-2xl text-base">
+        Connect directly with our engineering desk.
+      </p>
+    </div>
+    <div class="hidden sm:flex items-center gap-2 bg-slate-50 px-3.5 py-1.5 rounded-lg border border-slate-200 font-mono text-xs text-slate-600 font-medium">
+      <span class="material-symbols-outlined text-[16px] text-orange-600">pin_drop</span>
+      <span class="">Sharjah, United Arab Emirates</span>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Head Office & Physical Location Card -->
+    <div class="technical-card p-6 rounded-xl flex flex-col justify-between hover:border-orange-400 transition-all duration-300 group hover:-translate-y-1">
+      <div>
+        <div class="flex justify-between items-start mb-5">
+          <div class="w-12 h-12 rounded-lg bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 group-hover:scale-108 transition-transform">
+            <span class="material-symbols-outlined text-[24px]">location_on</span>
+          </div>
+          <span  class="font-mono text-xs px-2.5 py-1 rounded bg-orange-100/60 border border-orange-200 text-orange-800 font-medium">OFFICE</span>
+        </div>
+        <h3 class="text-xl font-headline font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+          Office Address
+        </h3>
+        <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+          Nimbaj Nagar, Vadgaon (Bk)<br>
+          Pune - 411041
+        </p>
+      </div>
+      <div class="pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-mono text-slate-500">
+        <span class="material-symbols-outlined text-orange-600 text-[16px]">corporate_fare</span>
+        <span class="">Central Engineering Facility</span>
+      </div>
+    </div>
+
+    <!-- Contact Channels Card -->
+    <div class="technical-card p-6 rounded-xl flex flex-col justify-between hover:border-orange-400 transition-all duration-300 group hover:-translate-y-1">
+      <div>
+        <div class="flex justify-between items-start mb-5">
+          <div class="w-12 h-12 rounded-lg bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 group-hover:scale-108 transition-transform">
+            <span class="material-symbols-outlined text-[24px]">contact_phone</span>
+          </div>
+          <span class="font-mono text-xs px-2.5 py-1 rounded bg-orange-100/60 border border-orange-200 text-orange-800 font-medium">DIRECT LINES</span>
+        </div>
+        <div class="font-mono text-xs text-orange-600 font-semibold mb-1">COMM-01</div>
+        <h3 class="text-xl font-headline font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+          Direct Communications
+        </h3>
+        <div class="space-y-3 mb-6 text-sm text-slate-700">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-orange-600 text-[18px]">call</span>
+            <div>
+              <div class="text-[11px] font-mono uppercase text-slate-400 font-semibold">Contact 1</div>
+              <a class="font-headline font-bold text-slate-900 hover:text-orange-600 transition-colors" href="tel:+918600919101">+91 8600919101</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-orange-600 text-[18px]">phone_in_talk</span>
+            <div>
+              <div class="text-[11px] font-mono uppercase text-slate-400 font-semibold">Contact 2</div>
+              <a class="font-headline font-bold text-slate-900 hover:text-orange-600 transition-colors" href="tel:+918275484542">+91 8275484542</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-orange-600 text-[18px]">mail</span>
+            <div>
+              <div class="text-[11px] font-mono uppercase text-slate-400 font-semibold">Official Inquiries</div>
+              <a class="font-mono text-xs text-slate-900 hover:text-orange-600 transition-colors" href="mailto:info@yupraelectromech.com">info@yupraelectromech.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-4 border-t border-slate-100 flex items-center gap-2 font-mono text-[11px] text-slate-500">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 pulse-indicator"></span>
+        <span class="">Dispatch Desk Online</span>
+      </div>
+    </div>
+
+    <!-- Working & Operational Hours Card -->
+    <div class="technical-card p-6 rounded-xl flex flex-col justify-between hover:border-orange-400 transition-all duration-300 group hover:-translate-y-1 md:col-span-2 lg:col-span-1">
+      <div>
+        <div class="flex justify-between items-start mb-5">
+          <div class="w-12 h-12 rounded-lg bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 group-hover:scale-108 transition-transform">
+            <span class="material-symbols-outlined text-[24px]">schedule</span>
+          </div>
+          <span  class="font-mono text-xs px-2.5 py-1 rounded bg-orange-100/60 border border-orange-200 text-orange-800 font-medium">TIMINGS</span>
+        </div>
+        <div class="font-mono text-xs text-orange-600 font-semibold mb-1">OPS-HRS</div>
+        <h3 class="text-xl font-headline font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+          Operational Schedule
+        </h3>
+        <div class="space-y-2.5 mb-6 text-xs font-mono text-slate-700"><div class="flex items-center justify-between p-2.5 rounded bg-orange-50/50 border border-orange-200 text-orange-800 font-semibold"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500 pulse-indicator"></span><span class="">Monday – Sunday</span></div><span class="text-[11px] font-bold uppercase tracking-wider">24 / 7 Active</span></div><div class="flex items-center justify-between p-2 rounded bg-slate-50 border border-slate-200"><span class="font-medium text-slate-700">Standard Operations</span><span class="text-slate-600">All Days • Round-the-Clock</span></div><div class="flex items-center justify-between p-2 rounded bg-slate-50 border border-slate-200"><span class="font-medium text-slate-700">Emergency Response</span><span class="text-slate-600">Immediate On-Call 24/7</span></div></div>
+      </div>
+      <div class="pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-mono text-slate-500"><span class="material-symbols-outlined text-orange-600 text-[16px]">support_agent</span><span class="">Continuous 24/7 operations &amp; emergency call-outs available anytime</span></div>
+    </div>
+  </div>
+</section><footer class="bg-slate-50 border-t border-slate-200">
+<div class="w-full px-6 lg:px-12 py-12 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Brand Summary Column -->
+<div class="md:col-span-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-3">
+<div class="w-9 h-9 rounded-lg bg-white border border-slate-200 shadow-sm overflow-hidden flex items-center justify-center">
+<img alt="Yupra Logo Icon" class="w-full h-full object-contain p-0.5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2DDuXqbRTcd71RpiOu03A8NrEo-Nmce9SY6KkjueekKZtfGXcD621FukKHsYbJ93Idguyl1PEzhAJ-Naxg5zcmBOzGG4tKD_IDIZjD4Egrs8LgO9i-V5Z5LG5N7aTVjM_od2699zeEMlORuUomhnNEhNEeHTRV9YaVVJuaeP3D2A-FFyd0XQQafR_y_IdQKh7cbDLtW0tUfDXmTshBQCHWIq6SpH8RXwoi1RvlKFnYoDIl3SFYUF4o3qKf881c9hPEq0">
+</div>
+<span class="font-headline text-lg font-bold text-slate-900">Yupra ElectroMech</span>
+</div>
+<p class="text-xs text-slate-600 mb-4 leading-relaxed">
+            Industrial-grade MEP, low-current life safety, and automated building systems engineering.
+          </p>
+</div>
+</div>
+<!-- Links Column 1: Core Services -->
+<div>
+<h4 class="font-headline font-bold text-slate-900 mb-3 text-sm">Core Engineering</h4>
+<ul class="space-y-2 text-xs text-slate-600">
+<li class="">
+<a class="hover:text-orange-600 transition-colors" href="#services">Electrical Engineering</a>
+</li>
+<li class="">
+<a class="hover:text-orange-600 transition-colors" href="#services">HVAC &amp; Mechanical Systems</a>
+</li>
+<li class="">
+<a class="hover:text-orange-600 transition-colors" href="#services">Life Safety &amp; Fire Protection</a>
+</li>
+<li class="">
+<a class="hover:text-orange-600 transition-colors" href="#services">Telemetry &amp; Automation</a>
+</li>
+</ul>
+</div>
+<!-- Links Column 2: Governance & Standards -->
+<div>
+<h4 class="font-headline font-bold text-slate-900 mb-3 text-sm">Standards &amp; Governance</h4>
+<ul class="space-y-2 text-xs text-slate-600">
+<li class="">
+<a class="hover:text-orange-600 transition-colors" href="#compliance">Civil Defence Compliance</a>
+</li>
+<li class="">
+<a class="hover:text-orange-600 transition-colors" href="#compliance">Safety Audits</a>
+</li>
+</ul>
+</div>
+<!-- Direct Inquiries Column (Removed Emergency Hotline) -->
+<div class="technical-card p-4 rounded-xl flex flex-col justify-between">
+<div>
+<span class="font-mono text-xs text-orange-600 uppercase font-bold block mb-1">Direct Technical Desk</span>
+<p class="text-xs text-slate-600 mb-2">Speak directly with an MEP systems consultant or certified low-current specialist.</p>
+<a class="font-headline text-base font-bold text-slate-900 hover:text-orange-600 transition-colors block" href="tel:+918600919101">
+            +91 8600919101
+          </a>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 font-mono text-[11px] text-slate-500">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="">Technical Desk Active</span>
+</div>
+</div>
+</div>
+<!-- Copyright Sub-Footer -->
+<div class="w-full border-t border-slate-200 py-6 px-6 lg:px-12 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+</div>
+</footer>
+</body></html>
